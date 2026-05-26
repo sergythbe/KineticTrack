@@ -1,0 +1,27 @@
+name: KineticTrack - Integration Continue Backend
+
+on:
+  push:
+    branches: [ "main", "develop", "feature/*" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  build:
+    name: Compilation et Verification
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Recuperation du code
+      uses: actions/checkout@v4
+
+    - name: Configuration de l'environnement .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Restauration des packages NuGet
+      run: dotnet restore
+
+    - name: Compilation du projet (Build)
+      run: dotnet build --no-restore --configuration Release
