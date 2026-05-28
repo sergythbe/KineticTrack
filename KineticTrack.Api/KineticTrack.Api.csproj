@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\KineticTrack.Application\KineticTrack.Application.csproj" />
+    <ProjectReference Include="..\KineticTrack.Infrastructure\KineticTrack.Infrastructure.csproj" />
+    <ProjectReference Include="..\KineticTrack.Security\KineticTrack.Security.csproj" />
+  </ItemGroup>
+
 </Project>
