@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\KineticTrack.Application\KineticTrack.Application.csproj" />
+  </ItemGroup>
+
 </Project>
