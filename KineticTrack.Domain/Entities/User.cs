@@ -36,8 +36,16 @@ public class User
         IsActive = false;
         IsDeleted = false;
     }
+    //Contructeur indispensable pour mon seed data
+    public User(Guid userId, string passwordHash, string firstname, string lastname, string email, bool isActive, bool isPasswordChanged)
+        : this(userId, passwordHash, firstname, lastname, email) 
+    {
+       
+        IsActive = isActive;
+        IsPasswordChanged = isPasswordChanged;
+    }
 
-  
+
     public void UpdateProfile(string lastname, string firstname)
     {
         Lastname = lastname.Trim();
